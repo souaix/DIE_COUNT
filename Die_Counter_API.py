@@ -17,7 +17,7 @@ from sqlalchemy import create_engine
 import pyodbc
 db = 'MES_Production'
 engine = create_engine(
-    'mssql+pyodbc://CIMADMIN:theil4893701@10.21.150.108/'+db+'?charset=utf8mb4&driver=SQL+Server+Native+Client+11.0')
+    'mssql+pyodbc://CIMADMIN:theil4893701@10.21.150.108/'+db+'?charset=utf8mb4&driver=ODBC Driver 18 for SQL Server&TrustServerCertificate=yes')
 con = engine.connect()  # 建立連線        
 
 def downloadfile(ftp, remotepath, localpath):
@@ -210,7 +210,7 @@ if __name__ == '__main__':
 
     from gevent import pywsgi
 
-    server = pywsgi.WSGIServer(('10.21.40.126',5000),app)
+    server = pywsgi.WSGIServer(('10.21.40.126',6000),app)
     server.serve_forever()
     
 
