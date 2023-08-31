@@ -210,7 +210,7 @@ if __name__ == '__main__':
 
     from gevent import pywsgi
 
-    server = pywsgi.WSGIServer(('10.21.40.126',6677),app)
+    server = pywsgi.WSGIServer(('10.21.98.21',6677),app)
     server.serve_forever()
     
 
