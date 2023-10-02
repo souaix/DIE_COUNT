@@ -39,7 +39,8 @@ def create_date_trans(create_date):
         
 app = Flask(__name__)
 
-@app.route('/die_count/', methods=['POST'],strict_slashes=False)
+@app_diecount.route('/die_count/', methods=['POST'],strict_slashes=False)
+@app.route('/map_check/', methods=['POST'],strict_slashes=False)
 
 
 
